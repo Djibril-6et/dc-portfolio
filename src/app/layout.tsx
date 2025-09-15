@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Fira_Code } from 'next/font/google';
 import Header from '@/components/Header/Header';
+import { I18nProvider } from '@/lib/i18n/context';
 import './globals.scss';
 
 const geistSans = Geist({
@@ -35,10 +36,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable}`}
       >
-        <div className="app-wrapper">
-          <Header />
-          <main className="main-content">{children}</main>
-        </div>
+        <I18nProvider>
+          <div className="app-wrapper">
+            <Header />
+            <main className="main-content">{children}</main>
+          </div>
+        </I18nProvider>
       </body>
     </html>
   );

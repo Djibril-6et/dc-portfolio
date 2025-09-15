@@ -24,7 +24,7 @@
 
   .right_part {
     height: 100%;
-    width: 450px;
+    width: 550px;
 
     .nav {
       height: 100%;
@@ -36,12 +36,14 @@
 
       .nav_links {
         height: 60%;
+        // width: 20%;
         display: flex;
         align-items: center;
 
         .nav_text {
           color: #f1f5f9;
           font-size: 1.1em;
+          // text-align: center;
         }
 
         .contact_button {
@@ -64,6 +66,27 @@
           cursor: pointer;
           transform: scale(1.2);
           transition: all 0.3s ease-in-out;
+        }
+
+        // Style spécifique pour le LanguageSwitch
+        &:has(.languageSwitch) {
+          &:hover {
+            transform: none; // Désactive le scale pour le LanguageSwitch
+          }
+
+          :global(.languageSwitch) {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid #475569;
+            color: #f1f5f9;
+            font-family: var(--font-fira-code), monospace;
+            font-size: 0.9rem;
+
+            &:hover {
+              background: rgba(5, 150, 105, 0.2);
+              border-color: #059669;
+              transform: translateY(-1px);
+            }
+          }
         }
       }
     }
