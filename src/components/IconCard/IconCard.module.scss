@@ -9,29 +9,29 @@
   transition: all 0.3s ease;
   border-radius: 12px;
   cursor: pointer;
-  
+
   &:hover {
     transform: translateY(-4px);
     background: rgba(var(--accent-primary-rgb), 0.1);
-    
+
     .icon_wrapper {
       transform: scale(1.1);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
-    
+
     .label {
       color: var(--accent-primary);
     }
   }
-  
+
   &:active {
     transform: translateY(-2px);
   }
 }
 
 .icon_wrapper {
-    height: 130px;
-    width: 130px;
+  height: 130px;
+  width: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +40,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border: 2px solid transparent;
-  
+
   .icon {
     height: 80%;
     width: 80%;

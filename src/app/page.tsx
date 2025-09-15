@@ -50,11 +50,11 @@ export default function Home() {
 
         <div className={styles.links_wrapper}>
           <IconCard
-              icon={GithubIcon}
-              label="GitHub"
-              href="https://github.com/Djibril-6et"
-              external={true}
-            />
+            icon={GithubIcon}
+            label="GitHub"
+            href="https://github.com/Djibril-6et"
+            external={true}
+          />
           <IconCard
             icon={LinkedinIcon}
             label="LinkedIn"

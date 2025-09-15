@@ -1,5 +1,5 @@
 // IconCard.tsx
-import {StaticImageData} from 'next/image';
+import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import styles from './IconCard.module.scss';
 
@@ -11,23 +11,19 @@ interface IconCardProps {
   external?: boolean; // Si le lien est externe (optionnel, défaut: false)
 }
 
-export default function IconCard({ 
-  icon, 
-  label, 
-  href, 
-  alt, 
-  external = false 
+export default function IconCard({
+  icon,
+  label,
+  href,
+  alt,
+  external = false,
 }: IconCardProps) {
-  const linkProps = external 
+  const linkProps = external
     ? { target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
   return (
-    <a 
-      href={href} 
-      className={styles.icon_card}
-      {...linkProps}
-    >
+    <a href={href} className={styles.icon_card} {...linkProps}>
       <div className={styles.icon_wrapper}>
         <Image
           src={icon}
