@@ -1,13 +1,62 @@
+// Variables générales - Thème Light
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  // Variables Next.js par défaut
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+  
+  // Variables générales pour tout le portfolio
+  --bg-primary: #F8FAFC;        // Fond général
+  --bg-secondary: #E2E8F0;      // Cards/sections
+  --bg-tertiary: #FFFFFF;
+  
+  --text-primary: #1E293B;      // Texte principal
+  --text-secondary: #475569;    // Texte secondaire
+  --text-muted: #64748B;        // Texte atténué
+  
+  --accent-primary: #059669;    // Boutons principaux (émeraude)
+  --accent-secondary: #DC2626;  // CTA/Accents (rouge)
+  --accent-tertiary: #475569;   // Éléments secondaires (slate)
+  
+  --border-primary: #E2E8F0;    // Bordures principales
+  --border-secondary: #CBD5E1;  // Bordures secondaires
+  
+  // États interactifs
+  --hover-primary: #047857;     // Hover sur émeraude
+  --hover-secondary: #B91C1C;   // Hover sur rouge
+  --hover-bg: #F1F5F9;         // Hover sur fond
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+// Variables générales - Thème Dark
+[data-theme="dark"] {
+  // Variables Next.js par défaut
+  --background: #0A0E1A;
+  --foreground: #F1F5F9;
+  
+  // Variables générales pour tout le portfolio
+  --bg-primary: #0A0E1A;        // Fond général (encore plus foncé)
+  --bg-secondary: #1A202C;      // Cards/sections
+  --bg-tertiary: #2D3748;       // Pour les éléments qui ont besoin d'un fond plus clair
+  
+  --text-primary: #F1F5F9;      // Texte principal
+  --text-secondary: #CBD5E1;    // Texte secondaire
+  --text-muted: #94A3B8;        // Texte atténué
+  
+  --accent-primary: #059669;    // Boutons principaux (émeraude)
+  --accent-secondary: #DC2626;  // CTA/Accents (rouge)
+  --accent-tertiary: #475569;   // Éléments secondaires (slate)
+  
+  --border-primary: #475569;    // Bordures principales
+  --border-secondary: #334155;  // Bordures secondaires
+  
+  // États interactifs
+  --hover-primary: #10B981;     // Hover sur émeraude (plus clair en dark)
+  --hover-secondary: #EF4444;   // Hover sur rouge (plus clair en dark)
+  --hover-bg: #1E293B;         // Hover sur fond
+  
+  // Shadows (plus subtiles en dark mode)
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
 html,
@@ -22,6 +71,7 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 // Structure de l'application
@@ -29,12 +79,74 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #0a0e1a; // Votre couleur de fond
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 .main-content {
   flex: 1;
-  padding: 0 2rem; // Padding global pour toutes les pages
+  padding: 0 2rem;
+}
+
+// Classes utilitaires générales
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+
+.border-primary { border-color: var(--border-primary); }
+.border-secondary { border-color: var(--border-secondary); }
+
+// Classes de boutons réutilisables
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--hover-primary);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--accent-secondary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--hover-secondary);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--accent-primary);
+  }
 }
 
 // Classes utilitaires pour vos polices

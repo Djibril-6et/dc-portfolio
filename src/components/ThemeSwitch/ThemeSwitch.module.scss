@@ -1,4 +1,4 @@
-.languageSwitch {
+.themeSwitch {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -12,6 +12,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  font-family: var(--font-fira-code), monospace;
 
   &:hover {
     background: var(--hover-bg);
@@ -23,13 +24,18 @@
     transform: translateY(0);
   }
 
-  .flag {
+  .icon {
     font-size: 1.1em;
+    transition: transform 0.3s ease;
   }
 
   .label {
-    font-family: var(--font-fira-code);
     font-size: 0.8em;
     letter-spacing: 0.5px;
+  }
+
+  // Animation lors du changement de thème
+  &:active .icon {
+    transform: rotate(180deg);
   }
 }
