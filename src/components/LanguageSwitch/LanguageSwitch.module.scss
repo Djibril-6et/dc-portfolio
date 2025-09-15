@@ -24,12 +24,23 @@
   }
 
   .flag {
-    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+
+    .flag_icon {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
   }
 
   .label {
     font-family: var(--font-fira-code);
     font-size: 0.8em;
     letter-spacing: 0.5px;
+    margin-left: 5px;
   }
 }

@@ -3,8 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/context';
-import LanguageSwitch from '@/components/LanguageSwitch/LanguageSwitch';
-import ThemeSwitch from '@/components/ThemeSwitch/ThemeSwitch';
+import Settings from '@/components/Settings/Settings';
 import styles from './Header.module.scss';
 import DCLogo from '../../../public/assets/logo/DCLogo';
 
@@ -22,10 +21,7 @@ export default function Header() {
       <div className={styles.right_part}>
         <nav className={styles.nav}>
           <div className={styles.nav_links}>
-            <LanguageSwitch />
-          </div>
-          <div className={styles.nav_links}>
-            <ThemeSwitch />
+            <Settings />
           </div>
           <div className={styles.nav_links}>
             <Link

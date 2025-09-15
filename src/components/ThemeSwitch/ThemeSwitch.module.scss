@@ -25,13 +25,23 @@
   }
 
   .icon {
-    font-size: 1.1em;
-    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+
+    .theme_icon {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
   }
 
   .label {
     font-size: 0.8em;
     letter-spacing: 0.5px;
+    margin-left: 5px;
   }
 
   // Animation lors du changement de thème

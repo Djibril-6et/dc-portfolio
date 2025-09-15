@@ -20,17 +20,23 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 // Dictionnaires de traduction
 const translations: Record<Language, Record<string, string>> = {
-  fr: {
-    'nav.projects': 'Projects',
-    'nav.about': 'Parcours',
-    'nav.contact': 'Contact',
-    'language.switch': 'Switch to English',
-  },
   en: {
     'nav.projects': 'Projects',
-    'nav.about': 'About',
+    'nav.about': 'Journey',
+    'nav.contact': 'Contact',
+    'language.switch': 'Switch to English',
+    'settings.title': 'Settings',
+    'settings.language': 'Language',
+    'settings.theme': 'Theme',
+  },
+  fr: {
+    'nav.projects': 'Projets',
+    'nav.about': 'Parcours',
     'nav.contact': 'Contact',
     'language.switch': 'Passer au français',
+    'settings.title': 'Paramètres',
+    'settings.language': 'Langue',
+    'settings.theme': 'Thème',
   },
 };
 
