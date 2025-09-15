@@ -6,7 +6,7 @@ import LanguageSwitch from '@/components/LanguageSwitch/LanguageSwitch';
 import ThemeSwitch from '@/components/ThemeSwitch/ThemeSwitch';
 import styles from './Settings.module.scss';
 import Image from 'next/image';
-import SettingsIcon from '../../../public/assets/icons/settings-icon.png'
+import SettingsIcon from '../../../public/assets/icons/settings-icon.png';
 
 export default function Settings() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,10 @@ export default function Settings() {
   // Fermer la modal en cliquant à l'extérieur
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -55,7 +58,7 @@ export default function Settings() {
         aria-label="Ouvrir les paramètres"
         title="Paramètres"
       >
-        <Image className={styles.gear} src={SettingsIcon} alt="Settings"/>
+        <Image className={styles.gear} src={SettingsIcon} alt="Settings" />
       </button>
 
       {isOpen && (
@@ -74,12 +77,16 @@ export default function Settings() {
 
             <div className={styles.modalContent}>
               <div className={styles.settingGroup}>
-                <label className={styles.settingLabel}>{t('settings.language')}</label>
+                <label className={styles.settingLabel}>
+                  {t('settings.language')}
+                </label>
                 <LanguageSwitch />
               </div>
 
               <div className={styles.settingGroup}>
-                <label className={styles.settingLabel}>{t('settings.theme')}</label>
+                <label className={styles.settingLabel}>
+                  {t('settings.theme')}
+                </label>
                 <ThemeSwitch />
               </div>
             </div>

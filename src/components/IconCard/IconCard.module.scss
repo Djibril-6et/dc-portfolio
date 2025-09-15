@@ -1,0 +1,59 @@
+// IconCard.module.scss
+.icon_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(var(--accent-primary-rgb), 0.1);
+    
+    .icon_wrapper {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .label {
+      color: var(--accent-primary);
+    }
+  }
+  
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+
+.icon_wrapper {
+    height: 130px;
+    width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  
+  .icon {
+    height: 80%;
+    width: 80%;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+}
+
+.label {
+  font-family: var(--font-fira-code), monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+  text-align: center;
+}

@@ -8,7 +8,9 @@
   background-color: var(--bg-primary);
   border-bottom: 2px solid var(--accent-tertiary);
   font-family: var(--font-fira-code), monospace;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 
   .left_part {
     height: 100%;
@@ -85,6 +87,6 @@
 }
 
 // Adaptation pour le thème light
-[data-theme="light"] .header_wrapper {
+[data-theme='light'] .header_wrapper {
   box-shadow: var(--shadow-sm);
 }
